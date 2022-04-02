@@ -28,7 +28,10 @@ const MainMint = ( { accounts, setAccounts}) => {
             try {
                 //run mint public function in EVMStudyNFT.sol
                 //solidity require bignumber instead regular js number
-                const response = await contract.mint(BigNumber.from(mintAmount));
+                const response = await contract.mint(BigNumber.from(mintAmount), {
+                    //need to pass correct mintPrice
+                    value: ethers.utils.parseEther((0.02 * mintAmount).toString()),
+                });
                 console.log('response: ', response)
             } catch (err) {
                 console.log('error: ', err)
