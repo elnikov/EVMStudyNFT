@@ -55,7 +55,7 @@ contract EVMStudyNFT is ERC721, Ownable {
         //allows OpenSEA grap every single urls of the images 
         //token URI for each token
         //That how your images get displayed on OpenSEA.io
-        return string(abi.encodePacked(baseTokenURI, String.toString(tokenId_), ".json"));
+        return string(abi.encodePacked(baseTokenUri, Strings.toString(tokenId_), ".json"));
     }
 
     function withdraw() external onlyOwner {
