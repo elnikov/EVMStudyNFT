@@ -1,5 +1,6 @@
 require("@nomiclabs/hardhat-waffle");
-require("@nomiclabs/hardhat-etherscan")
+//либа для проверки контрактов
+require("@nomiclabs/hardhat-etherscan");
 const dotenv = require("dotenv")
 dotenv.config();
 
