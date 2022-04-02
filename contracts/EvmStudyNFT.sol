@@ -3,11 +3,11 @@
 pragma solidity ^0.8.4;
 
 
-import '@openzeppelin/contracts/token/ERC721/ETC721.sol';
+import '@openzeppelin/contracts/token/ERC721/ERC721.sol';
 import '@openzeppelin/contracts/access/Ownable.sol';
 
 
-contract EvmStudyNFT is ERC721, Ownable {
+contract EVMStudyNFT is ERC721, Ownable {
     //Storage Variables. Cost a lot ETH. Very carryfull.
     uint256 public mintPrice;
     //Current number of NFT minted  
@@ -49,7 +49,7 @@ contract EvmStudyNFT is ERC721, Ownable {
     //Её перегружают
     //Чтобы такие как OpenSEA имели правильную ссылку для вызова
     function tokenURI(uint256 tokenId_) public view override returns (string memory) {
-        require(_exist(tokenId_), 'Token deos not exist');
+        require(_exists(tokenId_), 'Token deos not exist');
 
         //grab id and place behind the baseTokenURI and attached .json
         //allows OpenSEA grap every single urls of the images 
@@ -91,7 +91,7 @@ contract EvmStudyNFT is ERC721, Ownable {
             //make sure increment totalSupply
             //Do thtis Change before do interaction 
             //any time you change, you shoud it before interact with external function
-            _safeMint(msg.sender, newTokenID);
+            _safeMint(msg.sender, newTokenId);
         }
     }
 
