@@ -60,7 +60,15 @@ const MainMint = ( { accounts, setAccounts}) => {
                     letterSpacing='-5.5%'
                     fontFamily='VT323'
                     textShadow='0 2px 2px #000'>
-                        Это самое желаемое NFT в 2025 году
+                        Most Wanted NFT in 21 century.
+                        <br/>
+                        Test Network: Rinkeby.
+                        <br/>
+                        3 NFT per Wallet.
+                        <br/>
+                        <a href='https://rinkeby.etherscan.io/address/0xf65E85818553508F97D6E7Da0Cc36335C453b632#code' target='_blank'>etherscan</a>
+                        <br/>
+                        <a href='https://faucets.chain.link/rinkeby'  target='_blank'>faucet</a>
                     </Text>
                 </div>
                 {isConnected ? (
