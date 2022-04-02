@@ -3,7 +3,8 @@ import {useState} from 'react';
 //package allow connect blockhain very easy make life easier
 import {ethers, BigNumber} from 'ethers';
 import evmStudyNFT from './EVMStudyNFT.json'
-
+import { Box, Button, Flex, Link, Spacer, Input, Text} from '@chakra-ui/react';
+ 
 
 const evmStudyNFTAddress = '0xf65E85818553508F97D6E7Da0Cc36335C453b632'
 
@@ -47,22 +48,85 @@ const MainMint = ( { accounts, setAccounts}) => {
     }
 
     return (
-        <div>
-            <h1>EVMStudy</h1>
-            <p>Это самое желаемое NFT в 2025 году</p>
-            {isConnected ? (
+        <Flex justify='center' align='center' height='100vh' paddingBottom='150px'>
+            <Box width='520px'>
                 <div>
-                    <div>
-                        <button onClick={handleDecrement}>-</button>
-                        <input type='number' value={mintAmount} />
-                        <button onClick={handleIncrement}>+</button>
-                    </div>
-                    <button onClick={handleMint}>Заминтить!</button>
+                    <Text fontSize='48px' textShadow='0 5px #000000'>EVMStudy</Text>
+                    <Text
+                    fontSize='30px'
+                    letterSpacing='-5.5%'
+                    fontFamily='VT323'
+                    textShadow='0 2px 2px #000'>
+                        Это самое желаемое NFT в 2025 году
+                    </Text>
                 </div>
-            ) : (
-                <p>Вы не подключили metamask!</p>
-            )}
-        </div>
+                {isConnected ? (
+                    <div>
+                    <Flex align='center' justify='center'>
+                                <Button
+                            backgroundColor='#D6517D'
+                            borderRadius='5px'
+                            boxShadow='0px 2px 2px 1px #0F0F0F'
+                            color='white'
+                            cursor='pointer'
+                            fontFamily='inherit'
+                            padding='15px'
+                            marginTop='10px'
+                            onClick={handleDecrement}>
+                                -
+                            </Button> 
+                            <Input
+                            readOnly
+                            fontFamily='inherit'
+                            width='100px'
+                            height='40px'
+                            textAlign='center'
+                            paddingLeft='19px'
+                            marginTop='10px'
+                            type='number' 
+                            value={mintAmount} 
+                            />
+                            <Button
+                            backgroundColor='#D6517D'
+                            borderRadius='5px'
+                            boxShadow='0px 2px 2px 1px #0F0F0F'
+                            color='white'
+                            cursor='pointer'
+                            fontFamily='inherit'
+                            padding='15px'
+                            marginTop='10px'
+                            onClick={handleIncrement}>
+                                +
+                            </Button> 
+                    </Flex>
+                    <Button
+                            backgroundColor='#D6517D'
+                            borderRadius='5px'
+                            boxShadow='0px 2px 2px 1px #0F0F0F'
+                            color='white'
+                            cursor='pointer'
+                            fontFamily='inherit'
+                            padding='15px'
+                            marginTop='10px'
+                            onClick={handleMint}>
+                                MINT!!!
+                    </Button> 
+                    </div>
+                ) : (
+                    <Text
+                    marginTop='70px'
+                    fontsize='30px'
+                    letterSpacing='-5.5%'
+                    fontfamily='VT323'
+                    textShadow='0 3px #000'
+                    color='#D6517D'
+                    >
+                        Вы не подключили metamask!
+                    </Text>
+                )}
+            </Box>
+  
+        </Flex>
     );
 };
 
