@@ -81,7 +81,7 @@ contract EVMStudyNFT is ERC721, Ownable {
         //чтобы не превысело лимит кол-во NFT на один кошелек
         //TODO: фактически не работает как задумано
         require(walletMints[msg.sender] + quantity_ <= maxPerWallet, 'exceed max wallet');
-
+        walletMints[msg.sender] += quantity_;
         //цикл для несколькоих NFT
         for (uint256 i = 0; i < quantity_; i++) {
             uint256 newTokenId = totalSupply + 1;
