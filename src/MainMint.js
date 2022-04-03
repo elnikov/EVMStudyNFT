@@ -6,7 +6,7 @@ import evmStudyNFT from './EVMStudyNFT.json'
 import { Box, Button, Flex, Link, Spacer, Input, Text} from '@chakra-ui/react';
  
 
-const evmStudyNFTAddress = '0xf65E85818553508F97D6E7Da0Cc36335C453b632'
+const evmStudyNFTAddress = ' 0xf65E85818553508F97D6E7Da0Cc36335C453b632'
 
 const MainMint = ( { accounts, setAccounts}) => {
     //number of user mints
