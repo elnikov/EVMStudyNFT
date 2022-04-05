@@ -66,7 +66,7 @@ const MainMint = ( { accounts, setAccounts}) => {
                         <br/>
                         3 NFT per Wallet.
                         <br/>
-                        <a href='https://rinkeby.etherscan.io/address/0xf65E85818553508F97D6E7Da0Cc36335C453b632#code' target='_blank'>etherscan</a>
+                        <a href='https://rinkeby.etherscan.io/address/0x78623138412DD9a6b2b35051BAA769F5D9d10baB#code' target='_blank'>etherscan</a>
                         <br/>
                         <a href='https://faucets.chain.link/rinkeby'  target='_blank'>faucet</a>
                     </Text>
